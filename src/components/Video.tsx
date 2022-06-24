@@ -51,8 +51,8 @@ export function Video(props: VideoProps) {
 
   if (!data) {
     return (
-      <div className="flex-1 flex justify-center pt-60 ">
-        <CircleNotch size={100} className="animate-spin" />
+      <div className="flex-1 flex justify-center pt-20 pb-20 md:pt-60 ">
+        <CircleNotch size={100} color="#2ec27e" className="animate-spin" />
       </div>
     );
   }
@@ -68,13 +68,13 @@ export function Video(props: VideoProps) {
       </div>
 
       <div className="p-8 max-w-[1100px] mx-auto">
-        <div className="flex items-start gap-16">
+        <div className="flex-col lg:flex-row md:flex items-start gap-16">
           <div className="flex-1">
             <h1 className="text-2xl font-bold">{data.lesson.title}</h1>
             <p className="mt-4  text-gray-200 leading-relaxed">
               {data.lesson.description}
             </p>
-            <div className="flex items-center gap-4 mt-6">
+            <div className="flex items-center gap-4 mt-6 mb-16 md:mb-0">
               <img
                 className="h-16 w-16 rounded-full border-2 border-blue-500"
                 src={data.lesson.teacher.avatarURL}
@@ -90,22 +90,22 @@ export function Video(props: VideoProps) {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex lg:flex-col gap-4">
             <a
               href=""
-              className="p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
+              className="flex-1 p-4 text-sm bg-green-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-green-700 transition-colors">
               <DiscordLogo size={24} />
               Comunidade do Discord
             </a>
             <a
               href=""
-              className="p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors">
+              className="flex-1 p-4 text-sm border border-blue-500 text-blue-500 flex items-center rounded font-bold uppercase gap-2 justify-center hover:bg-blue-500 hover:text-gray-900 transition-colors">
               <Lightning size={24} />
               Acesse o desafio
             </a>
           </div>
         </div>
-        <div className="gap-8 mt-20 grid grid-cols-2">
+        <div className="gap-8 mt-20 grid grid-cols-1 xl:grid-cols-2">
           <a
             className="bg-gray-700 rounded overflow-hidden flex items-stretch gap-6 hover:bg-gray-600 transition-colors"
             href="">
